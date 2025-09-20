@@ -53,17 +53,17 @@ export default function HeaderBar() {
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
-          <ListItemButton component="a" href="/">
+          <ListItemButton component="a" href="/sobre">
             <ListItemText primary="Sobre" />
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
-          <ListItemButton component="a" href="/cart">
+          <ListItemButton component="a" href="/privacy">
             <ListItemText primary="Política de privacidade" />
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
-          <ListItemButton component="a" href="/blog">
+          <ListItemButton component="a" href="/terms">
             <ListItemText primary="Termos de serviço" />
           </ListItemButton>
         </ListItem>
