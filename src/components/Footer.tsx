@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
@@ -13,11 +12,6 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 function Copyright() {
   return (
     <Box>
-       <img
-            src="/logo.svg"
-            alt="Logo"
-            style={{ width: '40px', height: 'auto' }}
-            />
     <Typography variant="body2" sx={{ color: 'text.secondary', mt: 1 }}>
       {'Copyright © '}
       <Link color="text.secondary" href="/">
@@ -40,7 +34,6 @@ export default function Footer() {
 
   return (
     <React.Fragment>
-      <Divider />
       <Container
         sx={{
           display: 'flex',
@@ -51,50 +44,6 @@ export default function Footer() {
           textAlign: { sm: 'center', md: 'left' },
         }}
       >
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: { xs: 'column', sm: 'row' },
-            width: '100%',
-            justifyContent: 'space-between',
-          }}
-        >
-          <Box
-            sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: 4,
-              minWidth: { xs: '100%', sm: '60%' },
-            }}
-          >
-            <Box sx={{ width: { xs: '100%', sm: '60%' } }}>
-
-            </Box>
-          </Box>
-          <Box
-            sx={{
-              display: { xs: 'none', sm: 'flex' },
-              flexDirection: 'column',
-              gap: 1,
-            }}
-          >
-             <Link color="text.secondary" variant="body2" href="/">
-              Home
-            </Link>
-            <Link color="text.secondary" variant="body2" href="/sobre">
-              Sobre
-            </Link>
-            <Link color="text.secondary" variant="body2" href="/privacy">
-              Política de privacidade
-            </Link>
-            <Link color="text.secondary" variant="body2" href="/terms">
-              Termos de serviço
-            </Link>
-            <Link color="text.secondary" variant="body2" href="/faq">
-              FAQs
-            </Link>
-          </Box>
-        </Box>
         <Box
           sx={{
             display: 'flex',

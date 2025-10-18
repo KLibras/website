@@ -7,34 +7,46 @@ import Home from './pages/Home.tsx';
 import HeaderBar from './components/HeaderBar.tsx';
 import Footer from './components/Footer.tsx';
 import { Box } from '@mui/material';
-import About from './pages/About.tsx';
-import FAQ from './pages/FAQs.tsx';
-import Terms from './pages/Terms.tsx';
-import Privacy from './pages/Privacy.tsx';
+import { useLocation } from 'react-router-dom';
+
+function AppContent() {
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
+
+
+  if (isHomePage) {
+    return (
+      <Box sx={{ height: '100vh', overflow: 'hidden' }}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Box>
+    );
+  }
+
+  
+  return (
+    <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <HeaderBar />
+      <Box component="main" sx={{ flexGrow: 1 }}>
+        <Routes>
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </Box>
+      <Footer />
+    </Box>
+  );
+}
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Router>
-        <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-            <HeaderBar/>
-            <Box component="main" sx={{ flexGrow: 1 }}>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="*" element={<Navigate to="/" replace />} />
-                <Route path="/sobre" element={<About />} />
-                <Route path="/faq" element={<FAQ />} />
-                <Route path="/terms" element={<Terms />} />
-                <Route path="/privacy" element={<Privacy />} />
-              </Routes>
-            </Box>
-            <Footer/>
-        </Box>
+        <AppContent />
       </Router>
     </ThemeProvider>
   );
 }
 
 export default App;
-
