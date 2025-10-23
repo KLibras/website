@@ -615,7 +615,7 @@ export default function Home() {
                         sx={{
                             mt: 6,
                             color: '#000000ff',
-                            backgroundColor: '#DEBC32',
+                            backgroundColor: '#fdfdfdff',
                             borderColor: '#000000ff',
                             borderRadius: '50px',
                             textTransform: 'none',
