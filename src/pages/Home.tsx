@@ -23,86 +23,114 @@ export default function Home() {
                     scrollSnapAlign: 'start',
                     display: 'flex',
                     flexDirection: 'column',
-                    backgroundColor: '#FFFFFF',
+                    backgroundColor: '#1C1C1C',
                     position: 'relative',
                     margin: 0,
                     padding: 0,
                 }}
             >
-                
                 <Box sx={{ position: 'absolute', top: 0, left: 0, right: 0, zIndex: 10 }}>
                     <HeaderBar />
                 </Box>
 
+                <Container maxWidth="lg" sx={{ flex: 1, display: 'flex', alignItems: 'center' }}>
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            flexDirection: { xs: 'column', md: 'row' },
+                            alignItems: 'center',
+                            justifyContent: 'space-between',
+                            gap: 8,
+                            width: '100%',
+                        }}
+                    >
+                        
+                        <Box sx={{ flex: 1, textAlign: { xs: 'center', md: 'left' } }}>
+                            <BlurText
+                                text="Você quer aprender libras?"
+                                delay={150}
+                                animateBy="words"
+                                direction="top"
+                                sx={{
+                                    typography: { xs: 'h4', md: 'h2' },
+                                    fontWeight: 'bold',
+                                    color: '#FFFFFF',
+                                    mb: 3,
+                                }}
+                            />
+
+                            <Typography
+                                variant="h5"
+                                sx={{
+                                    color: '#B8B8B8',
+                                    mb: 4,
+                                    fontWeight: 400,
+                                }}
+                            >
+                                Venha aprender com <Box component="span" sx={{ color: '#DEBC32', fontWeight: 600 }}>KLibras</Box>
+                            </Typography>
+
+                            <Typography
+                                variant="body1"
+                                sx={{
+                                    color: '#D1D1D1',
+                                    mb: 5,
+                                    fontSize: '1.1rem',
+                                    lineHeight: 1.8,
+                                    maxWidth: '500px',
+                                    mx: { xs: 'auto', md: 0 },
+                                }}
+                            >
+                                Reconhecimento por câmera, gamificação e feedback em tempo real para você dominar Libras de forma divertida e eficaz.
+                            </Typography>
+
+                            <Button
+                                variant="contained"
+                                href='https://drive.google.com/drive/folders/1mtbaeko4a-po7SBvQ2eWwM6VfVU9tm22?usp=sharing'
+                                startIcon={<img src="/download.svg" alt="download" style={{ height: '24px', width: '24px' }} />}
+                                sx={{
+                                    color: '#000000',
+                                    backgroundColor: '#DEBC32',
+                                    borderRadius: '8px',
+                                    textTransform: 'none',
+                                    fontWeight: 600,
+                                    fontSize: '1rem',
+                                    py: 1.5,
+                                    px: 4,
+                                    border: 'none',
+                                    '&:hover': {
+                                        backgroundColor: '#C5A829',
+                                    },
+                                }}
+                            >
+                                Baixe agora
+                            </Button>
+                        </Box>
+
                 
-                <Box
-                    sx={{
-                        flex: 1,
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        textAlign: 'center',
-                        px: 2,
-                        fontFamily: 'sans-serif',
-                    }}
-                >
-                    <BlurText
-                        text="Você quer aprender libras?"
-                        delay={150}
-                        animateBy="words"
-                        direction="top"
-                        sx={{
-                            typography: 'h3',
-                            fontWeight: 'bold',
-                        }}
-                    />
-
-                    <Typography
-                        variant="h6"
-                        sx={{
-                            color: '#555',
-                            mt: 2,
-                        }}
-                    >
-                        Venha aprender com KLibras
-                    </Typography>
-
-                    <Box sx={{ mt: 6 }}>
-                        <img
-                            src="/screen.png"
-                            alt="Logo"
-                            style={{ width: '200px', height: 'auto' }}
-                        />
+                        <Box
+                            sx={{
+                                flex: 1,
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                            }}
+                        >
+                            <img
+                                src="/guy_chilling.png"
+                                alt="Pessoa usando KLibras"
+                                style={{
+                                    maxWidth: '100%',
+                                    height: 'auto',
+                                    maxHeight: '450px',
+                                }}
+                            />
+                        </Box>
                     </Box>
-
-                    <Button
-                        variant="outlined"
-                        href='https://drive.google.com/drive/folders/1mtbaeko4a-po7SBvQ2eWwM6VfVU9tm22?usp=sharing'
-                        startIcon={<img src="/download.svg" alt="download" style={{ height: '24px', width: '24px' }} />}
-                        sx={{
-                            mt: 6,
-                            color: '#000000ff',
-                            backgroundColor: '#DEBC32',
-                            borderColor: '#000000ff',
-                            borderRadius: '50px',
-                            textTransform: 'none',
-                            fontWeight: 'bold',
-                            fontSize: '1rem',
-                            py: 1.5,
-                            px: 4,
-                            '&:hover': {
-                                borderColor: '#000000ff',
-                                backgroundColor: '#c7b56eff',
-                            },
-                        }}
-                    >
-                        Baixe agora
-                    </Button>
-                </Box>
+                </Container>
             </Box>
 
-          
+            
             <Box
                 sx={{
                     height: '100vh',
@@ -111,7 +139,7 @@ export default function Home() {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    backgroundColor: '#b3e7ffff', 
+                    backgroundColor: '#F5F5DC',
                     margin: 0,
                     padding: 0,
                     px: { xs: 4, md: 8 },
@@ -124,16 +152,15 @@ export default function Home() {
                             flexDirection: { xs: 'column', md: 'row' },
                             alignItems: 'center',
                             justifyContent: 'space-between',
-                            gap: 6,
+                            gap: 8,
                         }}
                     >
-                        
                         <Box sx={{ flex: 1, textAlign: { xs: 'center', md: 'left' } }}>
                             <Typography
                                 variant="h3"
                                 sx={{
                                     fontWeight: 'bold',
-                                    color: '#2C2C2C',
+                                    color: '#000000',
                                     mb: 3,
                                 }}
                             >
@@ -142,7 +169,7 @@ export default function Home() {
                             <Typography
                                 variant="body1"
                                 sx={{
-                                    color: '#2C2C2C',
+                                    color: '#3A3A3A',
                                     fontSize: '1.1rem',
                                     lineHeight: 1.8,
                                 }}
@@ -152,7 +179,6 @@ export default function Home() {
                             </Typography>
                         </Box>
 
-                        
                         <Box
                             sx={{
                                 flex: 1,
@@ -167,7 +193,7 @@ export default function Home() {
                                 style={{
                                     maxWidth: '100%',
                                     height: 'auto',
-                                    maxHeight: '400px',
+                                    maxHeight: '450px',
                                 }}
                             />
                         </Box>
@@ -175,7 +201,7 @@ export default function Home() {
                 </Container>
             </Box>
 
-            
+           
             <Box
                 sx={{
                     height: '100vh',
@@ -184,7 +210,7 @@ export default function Home() {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    backgroundColor: '#FFFFFF',
+                    backgroundColor: '#1C1C1C',
                     margin: 0,
                     padding: 0,
                     px: { xs: 4, md: 8 },
@@ -197,10 +223,9 @@ export default function Home() {
                             flexDirection: { xs: 'column', md: 'row' },
                             alignItems: 'center',
                             justifyContent: 'space-between',
-                            gap: 6,
+                            gap: 8,
                         }}
                     >
-                       
                         <Box
                             sx={{
                                 flex: 1,
@@ -211,23 +236,22 @@ export default function Home() {
                             }}
                         >
                             <img
-                                src="/guy_phone.png"
-                                alt="Reconhecimento por câmera"
+                                src="/screen.png"
+                                alt="App mockup"
                                 style={{
                                     maxWidth: '100%',
                                     height: 'auto',
-                                    maxHeight: '400px',
+                                    maxHeight: '500px',
                                 }}
                             />
                         </Box>
 
-                       
                         <Box sx={{ flex: 1, textAlign: { xs: 'center', md: 'left' }, order: { xs: 1, md: 2 } }}>
                             <Typography
                                 variant="h3"
                                 sx={{
                                     fontWeight: 'bold',
-                                    color: '#2C2C2C',
+                                    color: '#FFFFFF',
                                     mb: 3,
                                 }}
                             >
@@ -236,18 +260,18 @@ export default function Home() {
                             <Typography
                                 variant="body1"
                                 sx={{
-                                    color: '#555',
+                                    color: '#D1D1D1',
                                     fontSize: '1.1rem',
                                     lineHeight: 1.8,
                                     mb: 2,
                                 }}
                             >
-                                Nosso grande diferencial é a tecnologia de reconhecimento por câmera. 
+                                Nosso <Box component="span" sx={{ color: '#DEBC32', fontWeight: 600 }}>grande diferencial</Box> é a tecnologia de reconhecimento por câmera. 
                             </Typography>
                             <Typography
                                 variant="body1"
                                 sx={{
-                                    color: '#555',
+                                    color: '#D1D1D1',
                                     fontSize: '1.1rem',
                                     lineHeight: 1.8,
                                 }}
@@ -260,7 +284,7 @@ export default function Home() {
                 </Container>
             </Box>
 
-            
+           
             <Box
                 sx={{
                     height: '100vh',
@@ -269,7 +293,7 @@ export default function Home() {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    backgroundColor: '#8FE3CF', 
+                    backgroundColor: '#F5F5DC',
                     margin: 0,
                     padding: 0,
                     px: { xs: 4, md: 8 },
@@ -285,7 +309,6 @@ export default function Home() {
                             gap: 4,
                         }}
                     >
-                       
                         <Box
                             sx={{
                                 flex: 1,
@@ -300,18 +323,17 @@ export default function Home() {
                                 style={{
                                     maxWidth: '100%',
                                     height: 'auto',
-                                    maxHeight: '350px',
+                                    maxHeight: '400px',
                                 }}
                             />
                         </Box>
 
-                        
                         <Box sx={{ flex: 1, textAlign: 'center', px: { xs: 0, md: 4 } }}>
                             <Typography
                                 variant="h3"
                                 sx={{
                                     fontWeight: 'bold',
-                                    color: '#2C2C2C',
+                                    color: '#000000',
                                     mb: 3,
                                 }}
                             >
@@ -320,7 +342,7 @@ export default function Home() {
                             <Typography
                                 variant="body1"
                                 sx={{
-                                    color: '#2C2C2C',
+                                    color: '#3A3A3A',
                                     fontSize: '1.1rem',
                                     lineHeight: 1.8,
                                 }}
@@ -330,7 +352,6 @@ export default function Home() {
                             </Typography>
                         </Box>
 
-                       
                         <Box
                             sx={{
                                 flex: 1,
@@ -345,7 +366,7 @@ export default function Home() {
                                 style={{
                                     maxWidth: '100%',
                                     height: 'auto',
-                                    maxHeight: '350px',
+                                    maxHeight: '380px',
                                 }}
                             />
                         </Box>
@@ -362,7 +383,7 @@ export default function Home() {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    backgroundColor: '#FFFFFF',
+                    backgroundColor: '#1C1C1C',
                     margin: 0,
                     padding: 0,
                     px: { xs: 4, md: 8 },
@@ -375,16 +396,15 @@ export default function Home() {
                             flexDirection: { xs: 'column', md: 'row' },
                             alignItems: 'center',
                             justifyContent: 'space-between',
-                            gap: 6,
+                            gap: 8,
                         }}
                     >
-                        
                         <Box sx={{ flex: 1, textAlign: { xs: 'center', md: 'left' } }}>
                             <Typography
                                 variant="h3"
                                 sx={{
                                     fontWeight: 'bold',
-                                    color: '#2C2C2C',
+                                    color: '#FFFFFF',
                                     mb: 3,
                                 }}
                             >
@@ -393,7 +413,7 @@ export default function Home() {
                             <Typography
                                 variant="body1"
                                 sx={{
-                                    color: '#555',
+                                    color: '#D1D1D1',
                                     fontSize: '1.1rem',
                                     lineHeight: 1.8,
                                     mb: 2,
@@ -404,7 +424,7 @@ export default function Home() {
                             <Typography
                                 variant="body1"
                                 sx={{
-                                    color: '#555',
+                                    color: '#D1D1D1',
                                     fontSize: '1.1rem',
                                     lineHeight: 1.8,
                                 }}
@@ -414,7 +434,6 @@ export default function Home() {
                             </Typography>
                         </Box>
 
-                       
                         <Box
                             sx={{
                                 flex: 1,
@@ -429,7 +448,7 @@ export default function Home() {
                                 style={{
                                     maxWidth: '100%',
                                     height: 'auto',
-                                    maxHeight: '400px',
+                                    maxHeight: '450px',
                                 }}
                             />
                         </Box>
@@ -445,12 +464,11 @@ export default function Home() {
                     scrollSnapAlign: 'start',
                     display: 'flex',
                     flexDirection: 'column',
-                    backgroundColor: '#8edee9ff',
+                    backgroundColor: '#F5F5DC',
                     margin: 0,
                     padding: 0,
                 }}
             >
-                
                 <Box
                     sx={{
                         flex: 1,
@@ -464,18 +482,28 @@ export default function Home() {
                 >
                     <Container maxWidth="lg">
                         <Typography
-                            variant="h3"
+                            variant="h2"
                             sx={{
                                 fontWeight: 'bold',
-                                color: '#000000ff',
+                                color: '#000000',
                                 textAlign: 'center',
-                                mb: 6,
+                                mb: 2,
                             }}
                         >
                             Pronto para começar?
                         </Typography>
+                        <Typography
+                            variant="h5"
+                            sx={{
+                                color: '#3A3A3A',
+                                textAlign: 'center',
+                                mb: 8,
+                                fontWeight: 400,
+                            }}
+                        >
+                            Junte-se a milhares de pessoas aprendendo Libras
+                        </Typography>
 
-                        {/* Three images in a row */}
                         <Box
                             sx={{
                                 display: 'flex',
@@ -483,10 +511,9 @@ export default function Home() {
                                 justifyContent: 'space-around',
                                 alignItems: 'center',
                                 gap: 6,
-                                mb: 6,
+                                mb: 8,
                             }}
                         >
-                            {/* Image 1 */}
                             <Box
                                 sx={{
                                     textAlign: 'center',
@@ -495,28 +522,28 @@ export default function Home() {
                             >
                                 <img
                                     src="/girl_chilling2.png"
-                                    alt="Comunidade inclusiva"
+                                    alt="Conteúdo interativo"
                                     style={{
                                         width: '200px',
                                         height: 'auto',
-                                        marginBottom: '16px',
+                                        marginBottom: '20px',
                                     }}
                                 />
                                 <Typography
                                     variant="h6"
                                     sx={{
                                         fontWeight: 'bold',
-                                        color: '#000000ff',
-                                        mb: 1,
+                                        color: '#000000',
+                                        mb: 1.5,
                                     }}
                                 >
-                                    Conteúdo interativo
+                                    Conteúdo Interativo
                                 </Typography>
                                 <Typography
                                     variant="body2"
                                     sx={{
-                                        color: '#030303ff',
-                                        fontSize: '0.95rem',
+                                        color: '#3A3A3A',
+                                        fontSize: '1rem',
                                         lineHeight: 1.6,
                                     }}
                                 >
@@ -524,7 +551,6 @@ export default function Home() {
                                 </Typography>
                             </Box>
 
-                            
                             <Box
                                 sx={{
                                     textAlign: 'center',
@@ -532,20 +558,20 @@ export default function Home() {
                                 }}
                             >
                                 <img
-                                    src="/guy_chilling.png"
+                                    src="/guy_phone.png"
                                     alt="Conteúdo estruturado"
                                     style={{
                                         width: '200px',
                                         height: 'auto',
-                                        marginBottom: '16px',
+                                        marginBottom: '20px',
                                     }}
                                 />
                                 <Typography
                                     variant="h6"
                                     sx={{
                                         fontWeight: 'bold',
-                                        color: '#000000ff',
-                                        mb: 1,
+                                        color: '#000000',
+                                        mb: 1.5,
                                     }}
                                 >
                                     Conteúdo Estruturado
@@ -553,8 +579,8 @@ export default function Home() {
                                 <Typography
                                     variant="body2"
                                     sx={{
-                                        color: '#000000ff',
-                                        fontSize: '0.95rem',
+                                        color: '#3A3A3A',
+                                        fontSize: '1rem',
                                         lineHeight: 1.6,
                                     }}
                                 >
@@ -562,7 +588,6 @@ export default function Home() {
                                 </Typography>
                             </Box>
 
-                    
                             <Box
                                 sx={{
                                     textAlign: 'center',
@@ -571,19 +596,19 @@ export default function Home() {
                             >
                                 <img
                                     src="/girl_phone2.png"
-                                    alt="Certificado"
+                                    alt="Comunidade"
                                     style={{
                                         width: '200px',
                                         height: 'auto',
-                                        marginBottom: '16px',
+                                        marginBottom: '20px',
                                     }}
                                 />
                                 <Typography
                                     variant="h6"
                                     sx={{
                                         fontWeight: 'bold',
-                                        color: '#000000ff',
-                                        mb: 1,
+                                        color: '#000000',
+                                        mb: 1.5,
                                     }}
                                 >
                                     Comunidade
@@ -591,51 +616,49 @@ export default function Home() {
                                 <Typography
                                     variant="body2"
                                     sx={{
-                                        color: '#000000ff',
-                                        fontSize: '0.95rem',
+                                        color: '#3A3A3A',
+                                        fontSize: '1rem',
                                         lineHeight: 1.6,
                                     }}
                                 >
-                                    Compita com outros usuário pelo primeiro lugar
+                                    Compita com outros usuários pelo primeiro lugar
                                 </Typography>
                             </Box>
                         </Box>
+
                         <Box sx={{
-                        flex: 1,
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        textAlign: 'center'
-                    }}>
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            textAlign: 'center'
+                        }}>
                             <Button
-                        variant="outlined"
-                        href='https://drive.google.com/drive/folders/1mtbaeko4a-po7SBvQ2eWwM6VfVU9tm22?usp=sharing'
-                        startIcon={<img src="/download.svg" alt="download" style={{ height: '24px', width: '24px' }} />}
-                        sx={{
-                            mt: 6,
-                            color: '#000000ff',
-                            backgroundColor: '#fdfdfdff',
-                            borderColor: '#000000ff',
-                            borderRadius: '50px',
-                            textTransform: 'none',
-                            fontWeight: 'bold',
-                            fontSize: '1rem',
-                            py: 1.5,
-                            px: 4,
-                            '&:hover': {
-                                borderColor: '#000000ff',
-                                backgroundColor: '#c7b56eff',
-                            },
-                        }}
-                    >
-                        Baixe agora
-                    </Button>
+                                variant="contained"
+                                href='https://drive.google.com/drive/folders/1mtbaeko4a-po7SBvQ2eWwM6VfVU9tm22?usp=sharing'
+                                startIcon={<img src="/download.svg" alt="download" style={{ height: '24px', width: '24px' }} />}
+                                sx={{
+                                    mt: 4,
+                                    color: '#000000',
+                                    backgroundColor: '#DEBC32',
+                                    borderRadius: '8px',
+                                    textTransform: 'none',
+                                    fontWeight: 600,
+                                    fontSize: '1.1rem',
+                                    py: 1.8,
+                                    px: 5,
+                                    border: 'none',
+                                    '&:hover': {
+                                        backgroundColor: '#C5A829',
+                                    },
+                                }}
+                            >
+                                Baixe agora gratuitamente
+                            </Button>
                         </Box>
                     </Container>
                 </Box>
 
-                
                 <Box sx={{ width: '100%' }}>
                     <Footer />
                 </Box>
