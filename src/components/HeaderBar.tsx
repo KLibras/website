@@ -19,7 +19,9 @@ export default function HeaderBar() {
                 style={{ width: '50px', height: 'auto' }}
               />
             </Grid>
-            <Grid>
+            <Grid sx={{
+              color: '#FFFFFF'
+            }}>
               <h2>KLibras</h2>
             </Grid>
           </Grid>
